@@ -9,12 +9,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Calculator',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor: Colors.grey[900],
+        primaryColorLight: Colors.grey,
+        accentColor: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Claculator'),
     );
   }
 }
@@ -35,6 +36,15 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: new Container());
+        body: new Container(
+            child: new Column(
+          children: <Widget>[
+            new Text("OutPut"),
+            new MaterialButton(
+              child: new Text("1"),
+              onPressed: () => {},
+            )
+          ],
+        )));
   }
 }
